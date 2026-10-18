@@ -1,0 +1,5 @@
+Google Material Icons — Copyright Google LLC.
+Licensed under the Apache License, Version 2.0.
+Source: https://github.com/google/material-design-icons
+Classic Material Icons SVGs (materialicons/24px.svg), not Material Symbols.
+Sprout changes: SVGs embedded in React components; sizes and colour inherited from interface.

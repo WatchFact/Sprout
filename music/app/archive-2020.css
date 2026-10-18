@@ -1,0 +1,10 @@
+/* Adapted from the November 2020 CSS supplied by the site owner.
+ * Only Sprout-scoped layout rules are applied. The source's global div/a hiding,
+ * consent suppression, third-party pickers and external font URLs are omitted.
+ */
+@font-face{font-family:'Sprout Roboto 2020';font-style:normal;font-weight:300;font-display:swap;src:url('/fonts/roboto-2020-300.ttf') format('truetype')}
+@font-face{font-family:'Sprout Roboto 2020';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/roboto-2020-400.ttf') format('truetype')}
+@font-face{font-family:'Sprout Roboto 2020';font-style:normal;font-weight:500;font-display:swap;src:url('/fonts/roboto-2020-500.ttf') format('truetype')}
+@font-face{font-family:'Sprout Roboto 2020';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/roboto-2020-700.ttf') format('truetype')}
+
+body{font-family:'Sprout Roboto 2020',Arial,sans-serif}

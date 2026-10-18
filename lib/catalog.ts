@@ -1,0 +1,3 @@
+export type Video={id:string;moderationCommentsLocked?:boolean;title:string;channel:string;channelId:string;src:string;poster:string;duration:string;category:string;description:string;created:number;uploaded?:boolean;views?:number;status?:string;moderationReason?:string;visibility?:string;tags?:string[];commentsEnabled?:boolean;license?:string;credits?:string;chapters?:{seconds:number;title:string}[];captions?:string;captionsKey?:string;captionsLanguage?:string;size?:number;mimeType?:string;originalName?:string};
+export const catalog:Video[]=[];
+export {categories,normaliseCategory} from './video-categories';

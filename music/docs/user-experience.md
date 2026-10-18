@@ -1,0 +1,15 @@
+# Everyday use pass — 17 October 2026
+
+This pass covers signup/sign-in/recovery, navigation and media discovery, playlists, overlays, uploading, account switching and security settings on Video and Music. It preserves the 2020 visual direction and local MD2 icons.
+
+- Display names accept spaces, capitals and Unicode, including the name Sprout. They are separate from private internal credential identifiers; names may repeat without merging accounts or granting badges/owner rights. Email remains the sign-in identifier. Existing accounts and their IDs remain intact. Legacy ID registration gives an accurate reserved-name error.
+- Signup uses three fields, an inline password reveal button, field-specific errors/focus, and collapsed optional channel settings. Signup creates a new Sprout account without any previous-channel import control. Existing accounts continue to open through normal sign-in. Credentials remain in component memory on failure, never browser storage.
+- Password recovery has a deliberate save-key acknowledgement before continuing, copy/download controls and a concise explanation. Network timeouts end busy states instead of leaving a form waiting forever.
+- Mobile navigation uses the existing top bar and side menu to retain the 2020 layout. The modern floating dock was removed on 18 October; Music retains its playback controls. Buttons and text are enlarged, forms use 16 px inputs, reduced motion and safe-area spacing are supported.
+- Browser Back/Forward and reload restore pages, searches, media and playlist locations through a shared URL parser. Private library controls use the actual shared viewer identity across brand switches.
+- Anonymous libraries give a sign-in action. Empty discovery is written for viewers/creators, not developers. Connection errors offer retry; offline status is visible. Toasts remain for six seconds and can be dismissed.
+- Dialogs trap keyboard focus, lock background scrolling and restore focus; menus dismiss on outside clicks. Escape closes dialogs even when a field has focus. Pending uploads warn before a tab closes.
+- Uploads show file/title/rights up front, optional metadata in a disclosure, progress and cancellation. Video publishing remains busy while saving the cover. Publish versus draft actions have distinct labels. Closing an upload clears its file preview to avoid misleading stale selections.
+- Your account opens with channel switching. Creating another channel and security/email/password controls are progressively disclosed. Changing an email or recovery key has its own password field instead of depending on an unrelated form above. Disabling two-step verification is no longer the main action when protection is already enabled.
+
+Validation: TypeScript, real mocked SQLite/crypto API regressions, URL round trips, server-rendered auth/account/main-page accessibility checks, publishing/moderation/profile/routing tests and production builds. Browser visual and touch interaction QA is unavailable in this environment; this source/test pass is not a substitute for testing on a real phone. No third-party analytics or new paid services were added.

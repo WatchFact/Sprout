@@ -1,0 +1,3 @@
+# Generate separate random values for each deployment; never commit real values.
+AUTH_PASSWORD_PEPPER=""
+TWO_FACTOR_ENCRYPTION_KEY=""

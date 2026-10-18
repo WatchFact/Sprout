@@ -1,0 +1,9 @@
+# Legacy channel import
+
+Import is an optional one-time migration from the native hosting identity used before independent Sprout accounts. It cannot name or select an arbitrary channel: the server derives the legacy parent from the authenticated hosting user ID, not the form email, profile name, channel ID, brand ID or account ID. Native identity headers are trusted only behind the retained Sites dispatch boundary. Existing application accounts are never overwritten or merged.
+
+The public signup form no longer offers migration or sends import flags (18 October 2026). Existing migration handling is retained for backwards compatibility, with its server-side ownership and 2FA checks. An explicit import without an eligible hosting identity is rejected rather than silently creating a different account. Both an existing claim marker and any existing Sprout credential for that parent block a new claim. Claim insertion is unique and transactional.
+
+If legacy Sprout 2FA is enabled, registration requires a valid authenticator or unused 2FA recovery code before creating a credential or claim. The original encrypted secret, replay counter, version and child ownership remain. A successful proof establishes the second-factor session after the new app session, avoiding a second use of the same code. Every new request still checks the current configuration version. No contact-email input can confer owner privileges.
+
+Regression tests: node tests/channel-import.cjs. Tests isolate Alice/Bob channels, forge target/owner/brand fields, reject anonymous/duplicate/previous-account claims, require 2FA before any migration write, and verify brand/security preservation and default opt-in UI. Native hosting authentication itself is a platform boundary, not reproduced by these mocked route tests. Browser interaction QA was unavailable.
