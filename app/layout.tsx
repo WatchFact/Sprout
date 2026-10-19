@@ -4,6 +4,7 @@ import "./legacy-2020.css";
 import "./archive-2020.css";
 import "./moderation.css";
 import "./experience.css";
+import "./player.css";
 
 export const metadata: Metadata = {
   verification: {
